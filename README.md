@@ -23,9 +23,9 @@ This project contains two awesome Python scripts aimed at people who are startin
 
 1. **Clone the repository:**
 
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-username/luit-silver-sept-2024.git
-   \`\`\`
+   ```
 
 2. **Explore the scripts:**
 
@@ -36,10 +36,10 @@ This project contains two awesome Python scripts aimed at people who are startin
 
 3. **Run the scripts:**
 
-   \`\`\`bash
+   ```bash
    python data_types.py
    python cool_imports.py
-   \`\`\`
+   ```
 
 ## 💡 **Why You Should Care**
 
