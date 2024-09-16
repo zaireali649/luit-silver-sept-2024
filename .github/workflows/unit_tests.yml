@@ -1,0 +1,28 @@
+name: Run Python Unit Tests
+
+on: 
+  push:
+    branches:
+      - main  # Trigger tests on push to main branch
+  pull_request:
+    branches:
+      - main  # Trigger tests on pull requests to main branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout the code from your repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # Use Python 3.9 (can adjust version)
+
+      # Run the unit tests without installing any dependencies
+      - name: Run Unit Tests
+        run: python -m unittest discover
