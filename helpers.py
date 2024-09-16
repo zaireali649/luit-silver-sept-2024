@@ -1,10 +1,10 @@
-def create_ubuntu_instance(ec2_client: any, instance_type: str = 't2.micro') -> dict:
+def create_ubuntu_instance(ec2_client: any, instance_type: str = 't3.micro') -> dict:
     """
     Creates an EC2 instance configuration for an Ubuntu instance.
 
     Args:
         ec2_client: The EC2 client object used to interact with AWS EC2 services.
-        instance_type (str): The instance type for the EC2 instance. Defaults to 't2.micro'.
+        instance_type (str): The instance type for the EC2 instance. Defaults to 't3.micro'.
 
     Returns:
         dict: A dictionary containing the AMI ID and instance type.
