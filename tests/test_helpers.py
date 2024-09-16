@@ -12,7 +12,7 @@ class TestEC2InstanceCreation(unittest.TestCase):
     def test_create_ubuntu_instance_default(self):
         """Test create_ubuntu_instance with default values."""
         expected_ami = 'ami-0e86e20dae9224db8'
-        expected_instance_type = 't2.micro'
+        expected_instance_type = 't3.micro'
         
         result = create_ubuntu_instance(None)
         
