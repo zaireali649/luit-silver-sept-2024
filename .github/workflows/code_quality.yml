@@ -1,0 +1,40 @@
+name: Code Quality Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'  # Replace '3.x' with your desired Python version
+
+      # Install required tools
+      - name: Install code quality tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install pycodestyle pydocstyle bandit
+
+      # Run pycodestyle to check PEP 8 compliance
+      - name: Run pycodestyle
+        run: pycodestyle .
+
+      # Run pydocstyle to check compliance with docstring conventions
+      - name: Run pydocstyle
+        run: pydocstyle .
+
+      # Run bandit to check for security issues
+      - name: Run bandit
+        run: bandit -r .
