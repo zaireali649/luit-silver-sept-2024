@@ -1,8 +1,10 @@
+"""Create instances in AWS using Python."""
+
 from helpers import *  # Assuming helpers module contains necessary instance creation functions
 
+
 def create_instances(ec2_client: any, ami_type: str = 'Ubuntu', instance_amount: int = 1) -> None:
-    """
-    Creates EC2 instances based on the specified AMI type and number of instances.
+    """Creates EC2 instances based on the specified AMI type and number of instances.
 
     Args:
         ec2_client: The EC2 client object used to interact with AWS EC2 services.
@@ -28,6 +30,7 @@ def create_instances(ec2_client: any, ami_type: str = 'Ubuntu', instance_amount:
         else:
             # If no matching AMI type is found
             print("No AMI Type Found")
+
 
 # Example usage
 ec2_client = get_ec2_client()  # Assume this fetches the appropriate EC2 client
