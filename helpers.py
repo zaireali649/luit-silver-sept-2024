@@ -1,6 +1,8 @@
+"""Placeholder helpers.py."""
+
+
 def create_ubuntu_instance(ec2_client: any, instance_type: str = 't3.micro') -> dict:
-    """
-    Creates an EC2 instance configuration for an Ubuntu instance.
+    """Creates an EC2 instance configuration for an Ubuntu instance.
 
     Args:
         ec2_client: The EC2 client object used to interact with AWS EC2 services.
@@ -15,9 +17,9 @@ def create_ubuntu_instance(ec2_client: any, instance_type: str = 't3.micro') -> 
     instance['instance_type'] = instance_type
     return instance
 
+
 def create_amazon_linux_2023_instance(ec2_client: any, instance_type: str = 't2.large') -> dict:
-    """
-    Creates an EC2 instance configuration for an Amazon Linux 2023 instance.
+    """Creates an EC2 instance configuration for an Amazon Linux 2023 instance.
 
     Args:
         ec2_client: The EC2 client object used to interact with AWS EC2 services.
@@ -32,9 +34,9 @@ def create_amazon_linux_2023_instance(ec2_client: any, instance_type: str = 't2.
     instance['instance_type'] = instance_type
     return instance
 
+
 def create_amazon_linux_2_instance(ec2_client: any, instance_type: str = 't2.nano') -> dict:
-    """
-    Creates an EC2 instance configuration for an Amazon Linux 2 instance.
+    """Creates an EC2 instance configuration for an Amazon Linux 2 instance.
 
     Args:
         ec2_client: The EC2 client object used to interact with AWS EC2 services.
@@ -49,9 +51,9 @@ def create_amazon_linux_2_instance(ec2_client: any, instance_type: str = 't2.nan
     instance['instance_type'] = instance_type
     return instance
 
+
 def get_ec2_client() -> None:
-    """
-    Placeholder function to get the EC2 client object.
+    """Placeholder function to get the EC2 client object.
 
     Returns:
         None: This function currently returns None.

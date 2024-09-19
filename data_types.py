@@ -1,4 +1,4 @@
-# Demonstrating Python Data Types
+"""Demonstrating Python Data Types."""
 
 # Integer (int)
 integer_value = 42
