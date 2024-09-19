@@ -1,5 +1,6 @@
 """Placeholder helpers.py."""
 
+
 def create_ubuntu_instance(ec2_client: any, instance_type: str = 't3.micro') -> dict:
     """Creates an EC2 instance configuration for an Ubuntu instance.
 
