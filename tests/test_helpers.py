@@ -1,7 +1,7 @@
 import unittest
 
 # Assuming the functions are imported from the module where they are defined
-from helpers import (
+from dummy_helpers import (
     create_ubuntu_instance,
     create_amazon_linux_2023_instance,
     create_amazon_linux_2_instance
