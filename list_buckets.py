@@ -1,3 +1,4 @@
+"""Script for list buckets."""
 import boto3  # Import the Boto3 library to interact with AWS services
 
 s3 = boto3.client('s3')  # Create an S3 client to interact with the S3 service
