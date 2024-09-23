@@ -1,20 +1,11 @@
-#%%
+import boto3  # Import the Boto3 library to interact with AWS services
 
-# list S3 Buckets
+s3 = boto3.client('s3')  # Create an S3 client to interact with the S3 service
 
-import boto3
+response = s3.list_buckets()  # Call the list_buckets method to retrieve a list of all S3 buckets
 
-s3 = boto3.client('s3')
+buckets = response["Buckets"]  # Extract the list of buckets from the response
 
-#%%
-
-response = s3.list_buckets()
-
-#%%
-
-buckets = response["Buckets"]
-
-#%%
-
+# Iterate over each bucket in the list and print its name
 for bucket in buckets:
     print(bucket["Name"])
