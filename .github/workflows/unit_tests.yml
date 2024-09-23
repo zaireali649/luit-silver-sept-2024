@@ -25,4 +25,4 @@ jobs:
 
       # Run the unit tests without installing any dependencies
       - name: Run Unit Tests
-        run: python -m unittest ./tests/test_helpers.py
+        run: python -m pytest --cov=. --cov-report=html tests/test_helpers.py
