@@ -1,0 +1,39 @@
+site_name: Level Up In Tech
+repo_url: https://github.com/zaireali649/luit-silver-sept-2024
+site_author: Silver Sept 2024
+site_description: Level Up In Tech Documentation
+copyright: 2024, Level Up In Tech
+use_directory_urls: false
+theme:
+  name: "material"
+  features:
+    - navigation.indexes
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite:
+      guess_lang: true
+plugins:
+  - search
+  - mkdocstrings
+  - include-markdown
+  - offline:
+      enabled: !ENV [ OFFLINE, false ]
+nav:
+  - Home: index.md
+  - Code:
+
+      - test_helpers.md
+      - aws_create_instance.md
+      - aws_list_resource.md
+      - data_types.md
+      - dummy_helpers.md
+      - hello_world.md
+      - helpers.md
+      - list_buckets.md
+      - test_range.md
+      - testing_imports.md
+      - Lambdas:
+        - lambdas/list_buckets.md
+        - lambdas/list_instance_ids.md
